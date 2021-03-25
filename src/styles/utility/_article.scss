@@ -1,0 +1,27 @@
+// JACKRO - Gatsby + Contentful
+// Author:   Jack Ryan Oracoy
+// URL:      https://github.com/jackryanoracoy/jackro_gatsby_contentful
+// License:  https://github.com/jackryanoracoy/jackro_gatsby_contentful/blob/master/LICENSE.txt
+
+/*--------------------------------------------------
+  Article
+--------------------------------------------------*/
+
+.article {
+  padding-top: ($section-gutter-ver / 2);
+
+  &.has-padding-wide { padding-top: $section-gutter-ver; }
+  &.has-padding-narrow { padding-top: ($section-gutter-ver / 4); }
+  &.has-padding-no { padding: 0 !important; }
+
+  @include media-breakpoint-min(lg) {
+    padding-top: $section-gutter-ver;
+
+    &.has-padding-wide { padding-top: ($section-gutter-ver * 2); }
+    &.has-padding-narrow { padding-top: ($section-gutter-ver / 2); }
+  }
+
+  @media print { page-break-inside: avoid; }
+}
+
+

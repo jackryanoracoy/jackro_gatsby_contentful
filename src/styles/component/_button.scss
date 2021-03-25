@@ -1,0 +1,53 @@
+// JACKRO - Gatsby + Contentful
+// Author:   Jack Ryan Oracoy
+// URL:      https://github.com/jackryanoracoy/jackro_gatsby_contentful
+// License:  https://github.com/jackryanoracoy/jackro_gatsby_contentful/blob/master/LICENSE.txt
+
+/*--------------------------------------------------
+  Button
+--------------------------------------------------*/
+
+.button {
+  display: inline-block;
+  min-width: $button-height;
+  padding: 0 15px;
+  color: $dark !important;
+  font-size: $font-nm;
+  line-height: $button-height;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-radius: $button-height / 2;
+  background-color: $white;
+  box-shadow: $z-depth-1;
+  white-space: nowrap;
+
+  &:hover,
+  &:visited,
+  &:active,
+  &:focus {
+    text-decoration: none;
+  }
+
+  &:hover {
+    box-shadow: $z-depth-2;
+  }
+
+  &.is-block { display: block; }
+
+  &.is-large {
+    min-width: $button-height-lg;
+    line-height: $button-height-lg;
+    border-radius: $button-height-lg / 2;
+    padding: 0 20px;
+  }
+
+  &%button-text { color: $white !important; }
+
+  @each $color, $value in $theme-colors {
+    &.is-#{$color} {
+      @extend %button-text;
+      background-color: #{$value};
+    }
+  }
+}

@@ -1,0 +1,12 @@
+// JACKRO - Gatsby + Contentful
+// Author:   Jack Ryan Oracoy
+// URL:      https://github.com/jackryanoracoy/jackro_gatsby_contentful
+// License:  https://github.com/jackryanoracoy/jackro_gatsby_contentful/blob/master/LICENSE.txt
+
+/*--------------------------------------------------
+  Focus
+--------------------------------------------------*/
+
+*:focus { outline: 1px dotted $info; }
+
+body:not(.js-tab-used) *:focus { outline: none; }

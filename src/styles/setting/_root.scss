@@ -1,0 +1,26 @@
+// JACKRO - Gatsby + Contentful
+// Author:   Jack Ryan Oracoy
+// URL:      https://github.com/jackryanoracoy/jackro_gatsby_contentful
+// License:  https://github.com/jackryanoracoy/jackro_gatsby_contentful/blob/master/LICENSE.txt
+
+/*--------------------------------------------------------------
+ Custom Properties (CSS Varialbles)
+--------------------------------------------------------------*/
+
+:root {
+
+  @each $color, $value in $theme-colors {
+    --#{$color}: #{$value};
+  }
+
+  // @each $color, $value in $colors {
+  //   --#{$color}: #{$value};
+  // }
+
+  @each $shade, $value in $greys {
+    --grey-#{$shade}: #{$value};
+  }
+
+  --font-family-sans-serif: #{inspect($sans-serif)};
+  --font-family-monospace: #{inspect($monospace)};
+}
